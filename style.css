@@ -88,7 +88,6 @@ iframe{
     font-size: 25x;
     margin: 20px;
     text-align: center;
-    border: solid;
     vertical-align: middle;
 }
 .imageanimatronic>p{
@@ -255,4 +254,22 @@ h1{
   background-color: #0a0a0a;
   border-radius: 20px;
   margin: 25px;
+}
+.videotextall{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  text-align: left;
+  border: solid #343434;
+  border-radius: 10px 10px 0 10px;
+  width: 1050px;
+  padding: 1em 2em;
+  justify-content: flex-end;
+}
+.videotextall>p{
+  font-size: 29px;
+}
+.textplace{
+  display: flex;
 }
