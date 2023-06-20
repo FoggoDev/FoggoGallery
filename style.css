@@ -9,7 +9,6 @@
 
 body {
   background-color: #121212;
-  font-family: 'Righteous', cursive;
 }
 
 p {
@@ -215,6 +214,14 @@ nav .socials a:last-child {
 
 .hide {
   visibility: hidden;
+  opacity: 0;
+  transition: all .25s ease;
+}
+
+.show {
+  visibility: visible;
+  opacity: 1;
+  transition: all .25s ease;
 }
 
 .titre {

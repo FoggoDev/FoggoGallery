@@ -3,6 +3,6 @@ const socialBtn = document.querySelector('nav .shareC');
 
 socialBtn.addEventListener('mouseenter', () => { 
     socialsDiv.style.left = `${socialBtn.getBoundingClientRect().left - 8}px`
-    socialsDiv.classList.remove('hide') 
+    socialsDiv.classList.replace('hide', 'show') 
 })
-socialsDiv.addEventListener('mouseleave', () => { socialsDiv.classList.add('hide') })
+socialsDiv.addEventListener('mouseleave', () => { socialsDiv.classList.replace('show', 'hide') })
