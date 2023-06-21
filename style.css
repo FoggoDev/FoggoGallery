@@ -1,78 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
-
 * {
   margin: 0;
   padding: 0;
-  
-  /* Size Variables */
-  --nav-size-fontdefault: 18px;
-
-  /* Color Variables */
-
-  /* Text Decorations */
   font-family: "Righteous", cursive;
   text-decoration: none;
+}
+
+body {
+  background-color: #121212;
+  font-family: 'Righteous', cursive;
+}
+
+p {
   color: #ffffff;
-
-}
-
-body { background-color: #121212; }
-
-body > p {
-  display: flex;
-  justify-content: center;
   font-size: 100px;
-  background-color: #000000;
-}
-
-nav {
-  height: 64px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  background-color: #000000;
-  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.2);
-  position: sticky;
-  top: 0;
-  z-index: 9;
 }
-
-nav > * { 
-  margin: 0 16px 0 16px; 
-  height: 24px;
-}
-
-nav > a {
-  text-transform: uppercase;
-  font-size: var(--nav-size-fontdefault);
-}
-
-nav .socials {
-  position: absolute;
-  display: flex;
-  padding: 4px 0;
-  margin-left: -8px;
-  border-radius: 999px;
-  background-color: #303030;
-  align-items: center;
-}
-
-nav .shareopen { margin: 0 16px 0 8px; }
-
-nav .socials a:not(.shareopen) img {
-  height: 22px;
-  display: flex;
-  align-self: center;
-}
-
-nav .socials a { margin: 0 4px; }
-nav .socials a:last-child { margin-right: 16px; }
-nav .graytxt { font-size: var(--nav-size-fontdefault); }
-
-.graytxt { color: #505050; }
-
-
 
 .btngamejolt > img {
   height: 20px;
@@ -214,16 +159,66 @@ iframe {
   border-right: none;
 }
 
-.hide {
-  visibility: hidden;
-  opacity: 0;
-  transition: all .25s ease;
+nav {
+  height: 64px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #000000;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 9;
 }
 
-.show {
-  visibility: visible;
-  opacity: 1;
-  transition: all .25s ease;
+nav a,
+.shareC {
+  display: flex;
+  text-transform: uppercase;
+  font-size: 18px;
+  margin: 0 16px 0 16px;
+  align-items: center;
+  color: white;
+}
+
+nav a > img {
+  height: 24px;
+}
+
+nav .socials {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 999px;
+  background-color: #303030;
+}
+
+nav .socials .shareopen {
+  margin: 0 16px 0 8px;
+}
+
+nav .socials a:not(.shareopen) {
+  height: 18px;
+}
+
+nav .socials a {
+  display: flex;
+  align-items: center;
+  margin: 8px 4px 8px 4px;
+}
+
+nav .socials a:last-child {
+  margin-right: 16px;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.titre {
+  background-color: #000000;
 }
 
 ::-webkit-scrollbar {
@@ -239,11 +234,24 @@ iframe {
   background-color: rgb(187, 187, 187);
 }
 
+.gris {
+  color: #505050;
+  font-size: 22px;
+  margin: 16px;
+  text-align: center;
+}
+
 .fnaf {
   display: flex;
   align-items: center;
   margin-left: 16px;
   margin: 24px;
+}
+
+.imgmove {
+  display: flex;
+  margin-left: 16px;
+  margin-right: 16px;
 }
 
 p,
