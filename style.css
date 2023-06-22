@@ -13,7 +13,13 @@
   font-family: "Righteous", cursive;
   text-decoration: none;
   color: #ffffff;
+}
 
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-thumb:hover { background-color: rgb(187, 187, 187); }
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background: rgb(63, 63, 63);
 }
 
 p, a, img, video, h1 {
@@ -67,22 +73,27 @@ h1 {
   width: 100%;
 }
 
+.deleterightborder {
+  border-radius: 16px 0 0 16px;
+  border-right: none;
+}
+
+.gray { color: #505050; }
+
 nav {
   height: 64px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #000000;
+  font-size: 22px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
   position: sticky;
   top: 0;
   z-index: 9;
 }
 
-nav > * { 
-  margin: 0 16px 0 16px; 
-  height: 24px;
-}
+nav > * { margin: 0 16px; }
 
 nav > a {
   text-transform: uppercase;
@@ -118,19 +129,36 @@ nav .socials a:last-child { margin-right: 16px; }
   margin: 32px;
 }
 
+.longbox { margin-bottom: 16px; }
+
+.longbox > div {
+  display: flex; 
+  flex-direction: row;
+  margin-bottom: 16px;
+}
+
+.longbox div > p {
+ flex: 1;
+ font-size: 25px;
+}
+
+.longbox video {
+ flex: 1;
+ width: 30%;
+}
+
+.longbox > .story, .software { flex-direction: column !important; }
+
 .aboutme { 
   display: flex; 
-  flex-direction: row !important;
+  flex-direction: row;
 }
 
 .aboutme p {
-  flex: none !important;
   width: 600px;
   padding: 1em 2em;
   margin: 16px 0 0 10px;
   font-size: 30px;
-  border-radius: 16px 0 0 16px;
-  border-right: none;
 }
 
 .aboutme > img {
@@ -139,32 +167,9 @@ nav .socials a:last-child { margin-right: 16px; }
 
 .software .boxedtxt { text-align: center; }
 
-.longbox > div {
-   display: flex; 
-   flex-direction: column;
-}
+.longbox > div:not(:first-child) { margin: 16px 0; }
 
-.longbox div > p {
-  flex: 1;
-  border-radius: 16px 0 0 16px;
-  border-right: none;
-  font-size: 25px;
-}
-
-.longbox video {
-  flex: 1;
-  width: 50%;
-}
-
-.fnaf {
-  margin: 16px 0;
-}
-
-.fnaf video {
-  width: 100%;
-}
-
-
+.multiplevideo video { width: 100%; }
 
 
 
@@ -282,26 +287,6 @@ iframe {
   opacity: 1;
   transition: all .25s ease;
 }
-
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-thumb {
-  border-radius: 8px;
-  background: rgb(63, 63, 63);
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: rgb(187, 187, 187);
-}
-
-.fnaf {
-  display: flex;
-  align-items: center;
-  margin-left: 16px;
-  margin: 24px;
-}*/
 
 .yeargroup {
   border: 1px solid #121212;
