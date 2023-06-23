@@ -157,7 +157,7 @@ nav .socials {
   position: absolute;
   display: flex;
   padding: 4px 0;
-  margin-left: -8px;
+  margin-left: 0;
   border-radius: 999px;
   background-color: #303030;
   align-items: center;
