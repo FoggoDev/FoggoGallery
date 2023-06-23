@@ -135,6 +135,7 @@ nav .socials a:last-child { margin-right: 16px; }
   display: flex; 
   flex-direction: row;
   margin-bottom: 16px;
+  margin: 16px 0;
 }
 
 .longbox div > p {
@@ -152,6 +153,7 @@ nav .socials a:last-child { margin-right: 16px; }
 .aboutme { 
   display: flex; 
   flex-direction: row;
+  margin-top: 0 !important;
 }
 
 .aboutme p {
@@ -167,9 +169,14 @@ nav .socials a:last-child { margin-right: 16px; }
 
 .software .boxedtxt { text-align: center; }
 
-.longbox > div:not(:first-child) { margin: 16px 0; }
-
 .multiplevideo video { width: 100%; }
+
+.multipleimg { 
+  flex: 1;
+  display: flex;
+  flex-direction: column; 
+  width: 60%;
+}
 
 
 
@@ -194,12 +201,6 @@ iframe {
 .Vdod {
   justify-content: center;
   display: flex;
-}
-
-.Videocl {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .videotext {
@@ -235,47 +236,6 @@ iframe {
   flex: 1;
 }
 
-.imageanimatronic {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 25x;
-  margin: 20px;
-  text-align: center;
-  vertical-align: middle;
-}
-
-.imageanimatronic>p {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 25px;
-  margin: 20px;
-  text-align: center;
-  vertical-align: middle;
-  width: 400px;
-}
-
-.text50 {
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
-  font-size: 25px;
-  margin: 10px;
-  text-align: left;
-  border: solid #343434;
-  border-radius: 20px 0 0 20px;
-  width: 400px;
-  padding: 1em 2em;
-  justify-content: flex-end;
-  border-right: none;
-}
-
-.cadca {
-  display: flex;
-  justify-content: center;
-}
-
 .hide {
   visibility: hidden;
   opacity: 0;
@@ -298,13 +258,6 @@ iframe {
 .allgame {
   gap: 20px;
   margin-top: 20px;
-}
-
-.cadca {
-  border: 1px solid #121212;
-  background-color: #0a0a0a;
-  border-radius: 20px;
-  justify-content: center;
 }
 
 .gamecont {
