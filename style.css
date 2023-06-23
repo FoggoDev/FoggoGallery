@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
-
 * {
   margin: 0;
   padding: 0;
@@ -223,5 +222,4 @@ nav .socials a:last-child { margin-right: 16px; }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-
 }
