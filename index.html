@@ -5,31 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="FqRG9ja5adL-UpSNogPuqgKXU275umEwSPpjXRWvbPg" />
     <link rel="icon" type="image/x-icon" href="image/icon/nightmarenight.ico">
+
+    <!-- Indexation -->
     <title>Foggo's Gallery</title>
     <meta name="description" content="My name is Foggo and welcome to my gallery, here I exhibit my work as a game developer and 3D artist.">
     
-    <link rel="stylesheet" href="style.css">
+    <!-- External Files -->
+    <link rel="stylesheet" href="stylesheets/style.css">
     <script src="script.js" defer></script>
 </head>
 <body>
-    <p>Foggo's Gallery</p>
-    <nav>
-        <img src="image/icon/homegris.svg" alt="Home">
-        <a href="animation.html">Animations</a>
-        <a href="model3d.html">3D Models</a>
-        <a href="game.html">Games</a>
-        <img class="share" src="image/icon/share.svg" alt="Socials Medias">
-        <div class="socials hide">
-            <img class="shareopen" src="image/icon/shareon.svg" alt="Socials Medias">
-            <a id="yt" href="https://www.youtube.com/channel/UC6U33tIZYt58zMdlxrf1YhA"> <img src="image/icon/youtube.svg" alt="YouTube"> </a>
-            <a id="gj" href="https://gamejolt.com/@Foggo_Dev"> <img src="image/icon/gamejolt.svg" alt="Gamejolt"> </a>
-            <a id="itch" href="https://foggo-dev.itch.io/"> <img src="image/icon/itch-io.svg" alt="Itch.io"> </a>
-            <a id="Paypal" href="https://www.paypal.com/paypalme/Alulia"> <img src="image/icon/paypal.svg" alt="Paypal"> </a>
-        </div>
+    <nav class="desktop">
+        <h1>Foggo's Gallery</h1>
+        <subnav>
+            <img src="image/icon/homegris.svg" alt="Home">
+            <a href="animation.html">Animations</a>
+            <a href="model3d.html">3D Models</a>
+            <a href="game.html">Games</a>
+            <img class="share" src="image/icon/share.svg" alt="Socials Medias">
+            <div class="socials hide">
+                <img class="shareopen" src="image/icon/shareon.svg" alt="Socials Medias">
+                <a href="https://www.youtube.com/channel/UC6U33tIZYt58zMdlxrf1YhA"> <img src="image/icon/youtube.svg" alt="YouTube"> </a>
+                <a href="https://gamejolt.com/@Foggo_Dev"> <img src="image/icon/gamejolt.svg" alt="Gamejolt"> </a>
+                <a href="https://foggo-dev.itch.io/"> <img src="image/icon/itch-io.svg" alt="Itch.io"> </a>
+                <a href="https://www.paypal.com/paypalme/Alulia"> <img src="image/icon/paypal.svg" alt="Paypal"> </a>
+            </div>
+        </subnav>
+    </nav>
+
+    <nav class="phone">
+        <img src="image/icon/menu.svg" alt="">
+        <h1>Foggo's Gallery</h1>
+        <subnav>
+            <div class="title">
+                <img src="image/icon/x.svg" alt="">
+                <h1>Foggo's Gallery</h1>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </subnav>
     </nav>
   
-    <div class="main">
-        <div class="longbox">
+    <main>
+        <longbox>
             <div class="aboutme">
                 <p class="boxedtxt deleterightborder">Hi, I'm Léo Party, I'm 19 and I'm a 3D creator.
                     I've created 2 downloadable projects and others that aren't finished yet.
@@ -57,7 +79,7 @@
                     <p>- PremierPro [for make video]</p>
                 </div>
             </div>
-        </div>
-    </div>
+        </longbox>
+    </main>
 </body>
 </html>

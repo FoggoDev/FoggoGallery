@@ -1,21 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
 * {
   margin: 0;
   padding: 0;
-  
   /* Size Variables */
-
   /* Color Variables */
-
   /* Text Decorations */
   font-family: "Righteous", cursive;
   text-decoration: none;
   color: #ffffff;
 }
 
-::-webkit-scrollbar { width: 8px; }
-::-webkit-scrollbar-thumb:hover { background-color: rgb(187, 187, 187); }
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(187, 187, 187);
+}
+
 ::-webkit-scrollbar-thumb {
   border-radius: 8px;
   background: rgb(63, 63, 63);
@@ -30,13 +32,8 @@ p, a, img, video, h1 {
   user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 }
 
-body {  background-color: #121212; }
-
-body > p {
-  display: flex;
-  justify-content: center;
-  font-size: 100px;
-  background-color: #000000;
+body {
+  background-color: #121212;
 }
 
 h1 {
@@ -49,49 +46,57 @@ h1 {
 .hide {
   visibility: hidden;
   opacity: 0;
-  transition: all .25s ease;
+  transition: all 0.25s ease;
 }
 
 .show {
   visibility: visible;
   opacity: 1;
-  transition: all .25s ease;
+  transition: all 0.25s ease;
 }
 
-.main {
+main {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 32px;
 }
 
-.longbox {
+/* END */
+longbox {
   max-width: 1100px;
   background-color: #0a0a0a;
   border-radius: 16px;
   margin-bottom: 16px;
 }
-
-.longbox > div {
-  display: flex; 
+longbox > div {
+  display: flex;
   flex-direction: row;
   margin-bottom: 16px;
   margin: 16px 0;
 }
-
-.longbox div > p {
- flex: 1;
- font-size: 25px;
+longbox > div > p {
+  flex: 1;
+  font-size: 25px;
 }
-
-.longbox video {
- flex: 1;
- width: 30%;
- height: fit-content;
- align-self: center;
+longbox > div > .download:has(h1) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-.boxedtxt {
+longbox video {
+  flex: 1;
+  width: 30%;
+  height: fit-content;
+  align-self: center;
+}
+longbox > .story, longbox .software {
+  flex-direction: column !important;
+}
+longbox .software .boxedtxt {
+  text-align: center;
+}
+longbox .boxedtxt {
   margin: 0 10px;
   text-align: left;
   border: solid #343434;
@@ -105,121 +110,154 @@ h1 {
   flex-direction: column;
   width: 100%;
 }
+.multiplevideo video {
+  width: 100%;
+}
 
-.multiplevideo video { width: 100%; }
-
-.multipleimg { 
+.multipleimg {
   flex: 1;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   width: 60%;
 }
 
 .deleterightborder {
-  border-radius: 16px 0 0 16px;
-  border-right: none;
+  border-radius: 16px 0 0 16px !important;
+  border-right: none !important;
 }
 
-.gray { color: #505050; }
+.gray {
+  color: #505050;
+}
 
-.download { 
+.download {
   flex: 1;
   padding: 16px;
 }
-
 .download iframe {
   width: 100%;
   margin: 8px 0;
 }
-/* END */
 
 nav {
+  background-color: #000000;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+nav.desktop {
+  display: flex;
+  flex-direction: column;
+}
+nav.desktop subnav {
   height: 64px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #000000;
-  font-size: 22px;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
   position: sticky;
   top: 0;
   z-index: 9;
 }
-
-nav > * { margin: 0 16px; }
-
-nav > a {
+nav.desktop subnav > * {
+  margin: 0 16px;
+}
+nav.desktop subnav > a {
   text-transform: uppercase;
   font-size: 18px;
 }
-
-nav .socials {
+nav.desktop subnav p.gray {
+  font-size: 22px;
+}
+nav.desktop .socials {
   position: absolute;
   display: flex;
   padding: 4px 0;
-  margin-left: 0;
+  margin-left: -8px;
   border-radius: 999px;
   background-color: #303030;
   align-items: center;
 }
-
-nav .shareopen { margin: 0 16px 0 8px; }
-
-nav .socials a:not(.shareopen) img {
+nav.desktop .socials a {
+  margin: 0 4px;
+}
+nav.desktop .socials a:not(.shareopen) img {
   height: 22px;
   display: flex;
   align-self: center;
 }
+nav.desktop .socials a:last-child {
+  margin-right: 16px;
+}
+nav.desktop .shareopen {
+  margin: 0 16px 0 8px;
+}
 
-nav .socials a { margin: 0 4px; }
-nav .socials a:last-child { margin-right: 16px; }
+nav.phone {
+  display: none;
+  justify-content: space-evenly;
+  position: sticky;
+  top: 0;
+  z-index: 9;
+}
+nav.phone > img {
+  display: flex;
+}
+nav.phone > h1 {
+  margin: 4px 16px 8px 0;
+}
+nav.phone subnav {
+  display: none;
+  position: absolute;
+  height: 100vh;
+  width: 90%;
+  background-color: #000000;
+  box-shadow: 4px 0 4px rgba(0, 0, 0, 0.2);
+  left: 0;
+}
+nav.phone subnav .title {
+  display: flex;
+  width: 100%;
+  height: 48px;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 4px 0 0 0;
+}
+nav.phone subnav .title > img {
+  width: 24px;
+}
 
-.longbox > .story, .software { flex-direction: column !important; }
-
-.aboutme { 
-  display: flex; 
+.aboutme {
+  display: flex;
   flex-direction: row;
   margin-top: 0 !important;
 }
-
 .aboutme p {
   width: 600px;
   padding: 1em 2em;
   margin: 16px 0 0 10px;
   font-size: 30px;
 }
-
-.aboutme > img { height: 400px; }
-
-.software .boxedtxt { text-align: center; }
-
-.longbox > div > .download:has(h1) {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.aboutme > img {
+  height: 400px;
 }
-
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-
+  nav.desktop {
+    display: none;
+  }
+  nav.phone {
+    display: flex !important;
+  }
+  h1 {
+    font-size: 2.6rem;
+  }
+  main {
+    display: none;
+  }
 }
-
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-
-}
-
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-
-}
-
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-
-}
-
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-}
+
+/*# sourceMappingURL=style.css.map */

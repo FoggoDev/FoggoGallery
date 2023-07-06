@@ -6,16 +6,34 @@
     <link rel="icon" type="image/x-icon" href="image/icon/nightmarenight.ico">
     <title>Model 3D - Foggo's Gallery</title>
     <meta name="description" content="In this part of the site, you'll find all the 3D models I've made">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
     <script src="script.js" defer></script>
 </head>
 <body>
-    <p>Foggo's Gallery</p>
-    <nav>
-        <a href="index.html"> <img src="image/icon/home.svg" alt="Home"> </a>
+    <nav class="desktop">
+        <h1>Foggo's Gallery</h1>
+        <div class="subnav">
+            <a href="index.html"> <img src="image/icon/home.svg" alt="Home"> </a>
+            <a href="animation.html">Animations</a>
+            <p class="gray" >3D Model</p>
+            <a href="Game.html">Games</a>
+            <img class="share" src="image/icon/share.svg" alt="Socials Medias">
+            <div class="socials hide">
+                <img class="shareopen" src="image/icon/shareon.svg" alt="Socials Medias">
+                <a href="https://www.youtube.com/channel/UC6U33tIZYt58zMdlxrf1YhA"> <img src="image/icon/youtube.svg" alt="YouTube"> </a>
+                <a href="https://gamejolt.com/@Foggo_Dev"> <img src="image/icon/gamejolt.svg" alt="Gamejolt"> </a>
+                <a href="https://foggo-dev.itch.io/"> <img src="image/icon/itch-io.svg" alt="Itch.io"> </a>
+                <a href="https://www.paypal.com/paypalme/Alulia"> <img src="image/icon/paypal.svg" alt="Paypal"> </a>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="phone">
+        <img src="image/icon/menu.svg" alt="">
+        <img src="image/icon/homegris.svg" alt="Home">
         <a href="animation.html">Animations</a>
-        <p class="gray" >3D Model</p>
-        <a href="Game.html">Games</a>
+        <a href="model3d.html">3D Models</a>
+        <a href="game.html">Games</a>
         <img class="share" src="image/icon/share.svg" alt="Socials Medias">
         <div class="socials hide">
             <img class="shareopen" src="image/icon/shareon.svg" alt="Socials Medias">
@@ -26,8 +44,8 @@
         </div>
     </nav>
 
-    <div class="main">
-        <div class="longbox">
+    <main>
+        <longbox>
             <div class="model3d">
                 <p class="boxedtxt deleterightborder">Here are some animatronic models that were created for the cancelled game Nightmare Night.
                     We have Foggo, a blue fox, who can open his face in two parts. Then, there's Welpy,
@@ -41,7 +59,7 @@
                     <img src="image/model3d/endo.webp" alt="">
                 </div>
             </div>
-        </div>
-    </div>
+        </longbox>
+    </main>
 </body>
 </html>
