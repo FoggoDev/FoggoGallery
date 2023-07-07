@@ -14,16 +14,19 @@ document.addEventListener("DOMContentLoaded", function () {
     const mobileNavbar = document.querySelector('nav.phone subnav');
     const mobileNavbarBtn = document.querySelector('nav.phone > img');
     const mobileNavBarList = document.querySelector('nav.phone subnav ul');
+    const mobileSocialDiv = document.querySelector('nav.phone subnav .socials')
 
     mobileNavbarBtn.addEventListener('click', () => { 
         if (mobileNavbarBtn.getAttribute("src") === 'image/icon/menu.svg') { 
             mobileNavbarBtn.setAttribute('src', 'image/icon/x.svg')
             mobileNavbar.classList.replace('slideout', 'slidein')
             mobileNavBarList.classList.replace('fadeout', 'fadein')
+            mobileSocialDiv.classList.replace('fadeout', 'fadein')
         } else { 
             mobileNavbarBtn.setAttribute('src', 'image/icon/menu.svg')
             mobileNavbar.classList.replace('slidein', 'slideout')
             mobileNavBarList.classList.replace('fadein', 'fadeout')
+            mobileSocialDiv.classList.replace('fadein', 'fadeout')
         }
     })
     /* END */
