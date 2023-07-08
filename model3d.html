@@ -10,39 +10,26 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <nav class="desktop">
+    <nav>
+        <img src="image/icon/menu.svg" alt="opens or closes a menu to browse the website">
         <h1>Foggo's Gallery</h1>
-        <div class="subnav">
-            <a href="index.html"> <img src="image/icon/home.svg" alt="Home"> </a>
-            <a href="animation.html">Animations</a>
-            <p class="gray" >3D Model</p>
-            <a href="Game.html">Games</a>
-            <img class="share" src="image/icon/share.svg" alt="Socials Medias">
-            <div class="socials hide">
-                <img class="shareopen" src="image/icon/shareon.svg" alt="Socials Medias">
-                <a href="https://www.youtube.com/channel/UC6U33tIZYt58zMdlxrf1YhA"> <img src="image/icon/youtube.svg" alt="YouTube"> </a>
-                <a href="https://gamejolt.com/@Foggo_Dev"> <img src="image/icon/gamejolt.svg" alt="Gamejolt"> </a>
-                <a href="https://foggo-dev.itch.io/"> <img src="image/icon/itch-io.svg" alt="Itch.io"> </a>
-                <a href="https://www.paypal.com/paypalme/Alulia"> <img src="image/icon/paypal.svg" alt="Paypal"> </a>
-            </div>
-        </div>
     </nav>
-
-    <nav class="phone">
-        <img src="image/icon/menu.svg" alt="">
-        <img src="image/icon/homegris.svg" alt="Home">
-        <a href="animation.html">Animations</a>
-        <a href="model3d.html">3D Models</a>
-        <a href="game.html">Games</a>
-        <img class="share" src="image/icon/share.svg" alt="Socials Medias">
-        <div class="socials hide">
-            <img class="shareopen" src="image/icon/shareon.svg" alt="Socials Medias">
-            <a href="https://www.youtube.com/channel/UC6U33tIZYt58zMdlxrf1YhA"> <img src="image/icon/youtube.svg" alt="YouTube"> </a>
-            <a href="https://gamejolt.com/@Foggo_Dev"> <img src="image/icon/gamejolt.svg" alt="Gamejolt"> </a>
-            <a href="https://foggo-dev.itch.io/"> <img src="image/icon/itch-io.svg" alt="Itch.io"> </a>
-            <a href="https://www.paypal.com/paypalme/Alulia"> <img src="image/icon/paypal.svg" alt="Paypal"> </a>
-        </div>
-    </nav>
+    <subnav class="slideout">
+        <ul class="fadeout">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="animation.html">Animations</a></li>
+            <li class="gray"><span>3D Models</span></li>
+            <li><a href="game.html">Games</a></li>
+            <li><img src="image/icon/share.svg" alt="Here you can find all my social networks"></li>
+        </ul>
+        <socials class="fadeout">
+            <img src="image/icon/alterate/gray/share.svg" alt="">
+            <a href="https://www.youtube.com/channel/UC6U33tIZYt58zMdlxrf1YhA"> <img src="image/icon/youtube.svg" alt="link to my YouTube channel"> </a>
+            <a href="https://gamejolt.com/@Foggo_Dev"> <img src="image/icon/gamejolt.svg" alt="link to my Gamejolt account"> </a>
+            <a href="https://foggo-dev.itch.io/"> <img src="image/icon/itch-io.svg" alt="link to my Itch.io account"> </a>
+            <a href="https://www.paypal.com/paypalme/Alulia"> <img src="image/icon/paypal.svg" alt="link to my Paypal account"> </a>
+        </socials>
+    </subnav>
 
     <main>
         <longbox>

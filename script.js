@@ -1,38 +1,42 @@
-document.addEventListener("DOMContentLoaded", function () {
-    /* Only Desktop */
-    const socialsDiv = document.querySelector('.socials');
-    const socialBtn = document.querySelector('nav .share');
+const mobileNavBtn = document.querySelector('nav > img');
+const subnav = document.querySelector('subnav')
+const mobileSubnavList = document.querySelector('subnav ul');
+const socialBtn = document.querySelector('subnav ul li:last-child img');
+const socialsDiv = document.querySelector('subnav socials');
 
-    socialBtn.addEventListener('mouseenter', () => { 
-        socialsDiv.style.left = `${socialBtn.getBoundingClientRect().left}px`
-        socialsDiv.classList.replace('fadeout', 'fadein') 
-    })
-    socialsDiv.addEventListener('mouseleave', () => { socialsDiv.classList.replace('fadein', 'fadeout') })
-    /* END */
+function checkScreenWidth () {
+    if (window.innerWidth > 600) {
+        subnav.classList.remove('slideout');
+        mobileSubnavList.classList.remove('fadeout');
+    } else {
+        subnav.classList.add('slideout');
+        mobileSubnavList.classList.add('fadeout');
+    }
+}
 
-    /* Only Mobile */
-    const mobileNavbar = document.querySelector('nav.phone subnav');
-    const mobileNavbarBtn = document.querySelector('nav.phone > img');
-    const mobileNavBarList = document.querySelector('nav.phone subnav ul');
-    const mobileSocialDiv = document.querySelector('nav.phone subnav .socials')
+window.onload = () => { checkScreenWidth(); }
+window.onresize = () => { checkScreenWidth(); }
 
-    mobileNavbarBtn.addEventListener('click', () => { 
-        if (mobileNavbarBtn.getAttribute("src") === 'image/icon/menu.svg') { 
-            mobileNavbarBtn.setAttribute('src', 'image/icon/x.svg')
-            mobileNavbar.classList.replace('slideout', 'slidein')
-            mobileNavBarList.classList.replace('fadeout', 'fadein')
-            mobileSocialDiv.classList.replace('fadeout', 'fadein')
-        } else { 
-            mobileNavbarBtn.setAttribute('src', 'image/icon/menu.svg')
-            mobileNavbar.classList.replace('slidein', 'slideout')
-            mobileNavBarList.classList.replace('fadein', 'fadeout')
-            mobileSocialDiv.classList.replace('fadein', 'fadeout')
-        }
-    })
-    /* END */
+/* Only Desktop */
+socialBtn.addEventListener('mouseenter', () => { 
+    socialsDiv.style.left = `${socialBtn.getBoundingClientRect().left}px`
+    socialsDiv.classList.replace('fadeout', 'fadein') 
+})
+socialsDiv.addEventListener('mouseleave', () => { socialsDiv.classList.replace('fadein', 'fadeout') })
+/* END */
 
-
-    
-
-});
-
+/* Only Mobile */
+mobileNavBtn.addEventListener('click', () => { 
+    if (mobileNavBtn.getAttribute("src") === 'image/icon/menu.svg') { 
+        mobileNavBtn.setAttribute('src', 'image/icon/x.svg')
+        subnav.classList.replace('slideout', 'slidein')
+        mobileSubnavList.classList.replace('fadeout', 'fadein')
+        socialsDiv.classList.replace('fadeout', 'fadein')
+    } else { 
+        mobileNavBtn.setAttribute('src', 'image/icon/menu.svg')
+        subnav.classList.replace('slidein', 'slideout')
+        mobileSubnavList.classList.replace('fadein', 'fadeout')
+        socialsDiv.classList.replace('fadein', 'fadeout')
+    }
+})
+/* END */
