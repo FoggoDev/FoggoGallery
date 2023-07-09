@@ -1,0 +1,330 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  /* Size Variables */
+  /* Color Variables */
+  /* Text Decorations */
+  font-family: "Righteous", cursive;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background: rgb(63, 63, 63);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(187, 187, 187);
+}
+
+p, a, img, video, h1 {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+body {
+  background-color: #121212;
+}
+
+h1 {
+  font-size: 6.25rem;
+  color: #fff;
+  text-align: center;
+}
+
+h2 {
+  font-size: 5rem;
+  color: #dedede;
+  text-align: center;
+}
+
+/* Templates */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 32px;
+}
+
+.fadeout {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.25s ease;
+}
+
+.fadein {
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.25s ease;
+}
+
+/* END */
+longbox {
+  max-width: 1100px;
+  background-color: #0a0a0a;
+  border-radius: 16px;
+  margin-bottom: 16px;
+}
+longbox > div {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 16px;
+  margin: 16px 0;
+}
+longbox > div > p, longbox > div .boxedtxt {
+  flex: 1;
+  font-size: 25px;
+}
+longbox > div > .download:has(h1) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+longbox video {
+  flex: 1;
+  width: 30%;
+  height: fit-content;
+  align-self: center;
+}
+longbox .software > div p {
+  text-align: center;
+}
+longbox .story, longbox .software {
+  flex-direction: column !important;
+}
+longbox .boxedtxt {
+  margin: 0 10px;
+  text-align: left;
+  border: solid #343434;
+  border-radius: 16px 16px 0 16px;
+  padding: 1em 2em;
+}
+
+.multiplevideo {
+  flex: 1;
+  flex-direction: column;
+  width: 100%;
+}
+.multiplevideo video {
+  width: 100%;
+}
+
+.multipleimg {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+.deleterightborder {
+  border-radius: 16px 0 0 16px !important;
+  border-right: none !important;
+}
+
+.download {
+  flex: 1;
+  padding: 16px;
+}
+.download iframe {
+  width: 100%;
+  margin: 8px 0;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  background-color: #000000;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+}
+nav img {
+  display: none;
+}
+
+subnav {
+  display: flex;
+  height: 64px;
+  background-color: #000000;
+  align-items: center;
+}
+subnav ul {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+subnav ul li {
+  display: flex;
+  margin: 0 16px;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+subnav ul li.gray span {
+  text-transform: none;
+  font-size: 21px;
+  color: #505050;
+}
+subnav ul li:nth-child(1)::before {
+  content: url(../image/icon/home.svg);
+  margin-top: 4px;
+}
+subnav ul li:nth-child(1).gray::before {
+  content: url(../image/icon/alterate/gray/home.svg);
+}
+subnav socials {
+  display: flex;
+  position: absolute;
+  margin-left: -8px;
+  padding: 4px 0;
+  border-radius: 999px;
+  background-color: #303030;
+}
+subnav socials > img {
+  margin: 0 16px 0 8px;
+}
+subnav socials a {
+  margin: 0 4px;
+}
+subnav socials a img {
+  height: 22px;
+  margin-bottom: -7px;
+}
+subnav socials a:first-child {
+  margin-left: 16px;
+}
+subnav socials a:last-child {
+  margin-right: 16px;
+}
+
+.aboutme {
+  display: flex;
+  flex-direction: row;
+  margin-top: 0 !important;
+}
+.aboutme p {
+  width: 600px;
+  padding: 1em 2em;
+  margin: 16px 0 0 10px;
+  font-size: 30px;
+}
+.aboutme > img {
+  height: 400px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 2.6rem;
+  }
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 9;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  nav > img {
+    display: flex;
+  }
+  nav > h1 {
+    margin: 4px 16px 8px 0;
+  }
+  subnav {
+    display: grid;
+    position: absolute;
+    width: 100%;
+    top: 64px;
+    padding-top: 12px;
+    background-color: #000000;
+    border-top: solid #343434 2px;
+  }
+  subnav ul {
+    display: list-item;
+    list-style: none;
+  }
+  subnav ul li::before {
+    margin: 0 16px 0 0;
+  }
+  subnav ul li:nth-child(1) {
+    display: inline;
+  }
+  subnav ul li:nth-child(2)::before {
+    content: url(../image/icon/wind.svg);
+  }
+  subnav ul li:nth-child(2).gray::before {
+    content: url(../image/icon/alterate/gray/wind.svg);
+  }
+  subnav ul li:nth-child(3)::before {
+    content: url(../image/icon/box.svg);
+  }
+  subnav ul li:nth-child(3).gray::before {
+    content: url(../image/icon/alterate/gray/box.svg);
+  }
+  subnav ul li:nth-child(4)::before {
+    content: url(../image/icon/home.svg);
+  }
+  subnav ul li:nth-child(4).gray::before {
+    content: url(../image/icon/alterate/gray/home.svg);
+  }
+  subnav ul li:last-child {
+    display: none;
+  }
+  subnav socials {
+    display: flex;
+    justify-self: center;
+    bottom: 16px;
+  }
+  subnav socials > img {
+    display: none;
+  }
+  subnav socials a:nth-child(2) {
+    margin: 0 8px 0 16px;
+  }
+  subnav socials a img {
+    margin-bottom: -4px;
+  }
+  subnav.slideout {
+    visibility: hidden;
+    height: 0;
+    transition: all 0.3s ease;
+  }
+  subnav.slidein {
+    visibility: visible;
+    height: calc(92vh - 64px);
+    transition: all 0.5s ease;
+  }
+  main {
+    display: none;
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  subnav {
+    position: sticky;
+    top: 0;
+    z-index: 9;
+  }
+  subnav ul li:nth-child(1).gray span {
+    display: none;
+  }
+  subnav ul li:nth-child(1) a {
+    height: 40%;
+    font-size: 8px;
+    opacity: 0;
+    position: absolute;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+/*# sourceMappingURL=style.css.map */
