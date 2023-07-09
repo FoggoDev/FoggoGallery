@@ -1,0 +1,5 @@
+# Ingore node files
+node_modules/
+
+# Ingore sass files
+stylesheets/style.css.map

@@ -7,28 +7,33 @@
     <title>Animations - Foggo's Gallery </title>
     <meta name="description" content="In this part of the site, you'll find all the animations and videos in which I've taken part.">
     
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
     <script src="script.js" defer></script>
 </head>
 <body>
-    <p>Foggo's Gallery</p>
     <nav>
-        <a href="index.html"> <img src="image/icon/home.svg" alt="Home"> </a>
-        <p class="gray">Animations</p>
-        <a href="model3d.html">3D Models</a>
-        <a href="game.html">Games</a>
-        <img class="share" src="image/icon/share.svg" alt="Socials Medias">
-        <div class="socials hide">
-            <img class="shareopen" src="image/icon/shareon.svg" alt="Socials Medias">
-            <a href="https://www.youtube.com/channel/UC6U33tIZYt58zMdlxrf1YhA"> <img src="image/icon/youtube.svg" alt="YouTube"> </a>
-            <a href="https://gamejolt.com/@Foggo_Dev"> <img src="image/icon/gamejolt.svg" alt="Gamejolt"> </a>
-            <a href="https://foggo-dev.itch.io/"> <img src="image/icon/itch-io.svg" alt="Itch.io"> </a>
-            <a href="https://www.paypal.com/paypalme/Alulia"> <img src="image/icon/paypal.svg" alt="Paypal"> </a>
-        </div>
+        <img src="image/icon/menu.svg" alt="opens or closes a menu to browse the website">
+        <h1>Foggo's Gallery</h1>
     </nav>
+    <subnav class="slideout">
+        <ul class="fadeout">
+            <li><a href="index.html">Home</a></li>
+            <li class="gray"><span>Animations</span></li>
+            <li><a href="model3d.html">3D Models</a></li>
+            <li><a href="game.html">Games</a></li>
+            <li><img src="image/icon/share.svg" alt="Here you can find all my social networks"></li>
+        </ul>
+        <socials class="fadeout">
+            <img src="image/icon/alterate/gray/share.svg" alt="">
+            <a href="https://www.youtube.com/channel/UC6U33tIZYt58zMdlxrf1YhA"> <img src="image/icon/youtube.svg" alt="link to my YouTube channel"> </a>
+            <a href="https://gamejolt.com/@Foggo_Dev"> <img src="image/icon/gamejolt.svg" alt="link to my Gamejolt account"> </a>
+            <a href="https://foggo-dev.itch.io/"> <img src="image/icon/itch-io.svg" alt="link to my Itch.io account"> </a>
+            <a href="https://www.paypal.com/paypalme/Alulia"> <img src="image/icon/paypal.svg" alt="link to my Paypal account"> </a>
+        </socials>
+    </subnav>
     
-    <div class="main">
-        <div class="longbox">
+    <main>
+        <longbox>
             <h1>2023</h1>
             <div class="avatarhair">
                 <p class="boxedtxt deleterightborder">I've decided to conduct an experiment to examine the various facial expressions achievable through the use of shape keys in Blender, as well as the realistic physics of hair simulation. Now, I will present the outcomes of this experiment.</p>
@@ -50,9 +55,9 @@
                     </video>
                 </div>
             </div>
-        </div>
+        </longbox>
         
-        <div class="longbox">
+        <longbox>
             <h1>2022</h1>
             <div class="nightmarenight">
                 <p class="boxedtxt deleterightborder">Here are two trailers for a game called Nightmare Night, which unfortunately will not have a sequel in 2023. However, these trailers are still intriguing and captivating, showcasing the potential of the game.</p>
@@ -72,9 +77,9 @@
                     <source src="video/animation/OutsideYourWindow.mp4" type="video/mp4">  
                 </video>
             </div>
-        </div>
+        </longbox>
 
-        <div class="longbox">
+        <longbox>
             <h1>2021</h1>
             <div class="halflife2">
                 <p class="boxedtxt deleterightborder">I've created this remake of the animation intro for Half-Life 2 in order to test and explore facial expressions in animation.</p>
@@ -82,8 +87,8 @@
                     <source src="video/animation/hlcompa.webm" type="video/webm">
                 </video>
             </div>
-        </div>
-    </div>
+        </longbox>
+    </main>
 </body>
 </html>
 

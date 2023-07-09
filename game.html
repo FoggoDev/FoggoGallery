@@ -7,28 +7,33 @@
     <link rel="icon" type="image/x-icon" href="image/icon/nightmarenight.ico">
     <title>Games - Foggo's Gallery</title>
     <meta name="description" content="In this part of the site, you'll find games I've worked on as a 3D artist and/or developer.">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
     <script src="script.js" defer></script>
 </head>
-
-<body>
-    <p>Foggo's Gallery</p>
+<body>    
     <nav>
-        <a href="index.html"> <img src="image/icon/home.svg" alt="Home"> </a>
-        <a href="animation.html">Animations</a>
-        <a href="model3d.html">3D Models</a>
-        <p class="gray">Games</p>
-        <img class="share" src="image/icon/share.svg" alt="Socials Medias">
-        <div class="socials hide">
-            <img class="shareopen" src="image/icon/shareon.svg" alt="Socials Medias">
-            <a href="https://www.youtube.com/channel/UC6U33tIZYt58zMdlxrf1YhA"> <img src="image/icon/youtube.svg" alt="YouTube"> </a>
-            <a href="https://gamejolt.com/@Foggo_Dev"> <img src="image/icon/gamejolt.svg" alt="Gamejolt"> </a>
-            <a href="https://foggo-dev.itch.io/"><img src="image/icon/itch-io.svg" alt="Itch.io"></a>
-            <a href="https://www.paypal.com/paypalme/Alulia"> <img src="image/icon/paypal.svg" alt="Paypal"> </a>
-        </div>
+        <img src="image/icon/menu.svg" alt="opens or closes a menu to browse the website">
+        <h1>Foggo's Gallery</h1>
     </nav>
-    <div class="main">
-        <div class="longbox">
+    <subnav class="slideout">
+        <ul class="fadeout">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="animation.html">Animations</a></li>
+            <li><a href="model3d.html">3D Models</a></li>
+            <li class="gray"><span>Games</span></li>
+            <li><img src="image/icon/share.svg" alt="Here you can find all my social networks"></li>
+        </ul>
+        <socials class="fadeout">
+            <img src="image/icon/alterate/gray/share.svg" alt="">
+            <a href="https://www.youtube.com/channel/UC6U33tIZYt58zMdlxrf1YhA"> <img src="image/icon/youtube.svg" alt="link to my YouTube channel"> </a>
+            <a href="https://gamejolt.com/@Foggo_Dev"> <img src="image/icon/gamejolt.svg" alt="link to my Gamejolt account"> </a>
+            <a href="https://foggo-dev.itch.io/"> <img src="image/icon/itch-io.svg" alt="link to my Itch.io account"> </a>
+            <a href="https://www.paypal.com/paypalme/Alulia"> <img src="image/icon/paypal.svg" alt="link to my Paypal account"> </a>
+        </socials>
+    </subnav>
+
+    <main>
+        <longbox>
             <h1>Five Night's at Freddy UE4 Remake</h1>
             <div class="fnaf">
                 <div class="download">
@@ -39,9 +44,9 @@
                     <source src="video/game/fnafUE4Remaketrailer.mp4" type="video/mp4">
                 </video>
             </div>
-        </div>
+        </longbox>
 
-        <div class="longbox">
+        <longbox>
             <h1>Oryumé</h1>
             <div class="oryume">
                 <div class="download">
@@ -52,9 +57,9 @@
                     <source src="video/game/OryuméPreAlphaShowcase.mp4" type="video/mp4">
                 </video>
             </div>
-        </div>
+        </longbox>
 
-        <div class="longbox">
+        <longbox>
             <h1>Dead Or Run</h1>
             <div class="deadorrun">
                 <div class="download"> <h1>Coming soon!!!</h1> </div>
@@ -62,9 +67,9 @@
                     <source src="video/game/TrailerDOR[EN].mp4" type="video/mp4">
                 </video>
             </div>
-        </div>
+        </longbox>
 
-        <div class="longbox">
+        <longbox>
             <h1>Nightmare Night</h1>
             <div class="nightmarenigh">
                 <div class="download"> <h1>Coming soon!!!</h1> </div>
@@ -72,8 +77,8 @@
                     <source src="video/NightmareNightTeaserTrailer.mp4" type="video/mp4">
                 </video>
             </div>
-        </div>
-    </div>
+        </longbox>
+    </main>
 </body>
 
 </html>

@@ -1,0 +1,22 @@
+{
+  "name": "foggogallery",
+  "version": "1.0.0",
+  "description": "Foggo's Website",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FoggoDev/FoggoGallery.git"
+  },
+  "author": "Foggo & DoggoNako",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FoggoDev/FoggoGallery/issues"
+  },
+  "homepage": "https://github.com/FoggoDev/FoggoGallery#readme",
+  "dependencies": {
+    "sass": "^1.63.6"
+  }
+}
