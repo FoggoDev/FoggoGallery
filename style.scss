@@ -243,31 +243,6 @@ main {
     }
 }
 
-/*longbox {
-    > div {
-        display: flex;
-        flex-direction: row;
-        margin-bottom: 16px;
-        margin: 16px 0;
-
-        > .download:has(h1) {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-    }
-}*/
-
-/*.download {
-    flex: 1;
-    padding: 16px;
-
-    iframe {
-        width: 100%;
-        margin: 8px 0;
-    }
-}*/
-
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     h1 { font-size: 2.6rem }
