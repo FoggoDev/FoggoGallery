@@ -235,9 +235,11 @@ main section > div .download h3 {
   h1 {
     font-size: 2.6rem;
   }
+  
   h2 {
     font-size: 2rem;
   }
+  
   nav {
     position: sticky;
     top: 0;
