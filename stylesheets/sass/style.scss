@@ -1,0 +1,91 @@
+@use 'settings'; //Import files and settings set on all elements across the website
+@use 'var'; //Color, Size & Co.
+@use 'templates'; //Style applied on > 2 elements
+@use 'medias'; //Responsive Website
+
+::-webkit-scrollbar { width: 8px; }
+
+::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background: #3F3F3F;
+    
+    &:hover { background-color: #BBBBBB; }
+}
+
+body { background-color: var.$background-color; }
+
+header {
+    /* Keep <header> on top of the screen */
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+    height: 64px;
+    display: flex;
+    padding: 0 48px;
+    align-items: center;
+    background-color: var.$background-color;
+
+    img { height: 24px }
+    
+    .internalLinks {
+        width: 100%;
+        justify-content: end;
+        gap: 24px;
+        
+        a { font-weight: 500; }
+    }
+
+    > div { 
+        display: flex;
+        & > * { height: 100%; }
+    }
+
+    button, a { 
+        font-size: 18px; 
+        display: flex;
+        align-items: center;
+        color: #ffffff80;
+        font-weight: 700;
+        cursor: pointer;
+        background-color: #00000000;
+        border-color: #00000000;
+        text-transform: uppercase;
+    }
+    
+    > button { 
+        margin: 2px 0 0 32px;
+
+        &::after{
+            margin-top: 8px;
+            content: url(../../assets/svg/chevron-down.svg);
+            filter: invert(49%);
+        }
+    }
+
+    .langList {
+        position: absolute;
+        display: block;
+        right: 40px;
+        top: 48px;
+        padding: 2px 6px;
+        border: #cccccc solid 2px;
+        border-radius: 8px;
+    }
+}
+
+main:has(.txtArea + img) {
+    display: flex;
+    align-items: center;
+
+    .txtArea { 
+        width: 100%; 
+        p { width: 500px; }
+    }
+
+    img { 
+        height: 100%;
+    }
+}
+
+//.about {}

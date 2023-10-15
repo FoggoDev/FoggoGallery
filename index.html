@@ -3,67 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="FqRG9ja5adL-UpSNogPuqgKXU275umEwSPpjXRWvbPg" />
-    <link rel="icon" type="image/x-icon" href="image/icon/nightmarenight.ico">
-
-    <!-- Indexation -->
-    <title>Foggo's Gallery</title>
-    <meta name="description" content="My name is Foggo and welcome to my gallery, here I exhibit my work as a game developer and 3D artist.">
     
     <!-- External Files -->
-    <link rel="stylesheet" href="stylesheets/style.css">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="./stylesheets/style.css">
+    <script src="./js/vanilla/script.js" defer></script>
+
+    <title>FoggoDev</title>
 </head>
 <body>
-
-    <nav>
-        <img src="image/icon/menu.svg" alt="opens or closes a menu to browse the website">
-        <h1>Foggo's Gallery</h1>
-    </nav>
-    <subnav class="slideout">
-        <ul class="fadeout">
-            <li class="gray"><span>Home</span></li>
-            <li><a href="animation.html">Animations</a></li>
-            <li><a href="model3d.html">3D Models</a></li>
-            <li><a href="game.html">Games</a></li>
-            <li><img src="image/icon/share.svg" alt="Here you can find all my social networks"></li>
-        </ul>
-        <socials class="fadeout">
-            <img src="image/icon/alterate/gray/share.svg" alt="">
-            <a href="https://www.youtube.com/channel/UC6U33tIZYt58zMdlxrf1YhA"> <img src="image/icon/youtube.svg" alt="link to my YouTube channel"> </a>
-            <a href="https://gamejolt.com/@Foggo_Dev"> <img src="image/icon/gamejolt.svg" alt="link to my Gamejolt account"> </a>
-            <a href="https://foggo-dev.itch.io/"> <img src="image/icon/itch-io.svg" alt="link to my Itch.io account"> </a>
-            <a href="https://www.paypal.com/paypalme/Alulia"> <img src="image/icon/paypal.svg" alt="link to my Paypal account"> </a>
-        </socials>
-    </subnav>
-  
+    <header>
+        <img src="./assets/svg/logo.svg">
+        <div class="internalLinks">
+            <a href="index.html" id="home"></a>
+            <a href="" id="animations"></a>
+            <a href="" id="blenderModels"></a>
+            <a href="" id="games"></a>
+            <a href="" id="devlog"></a>
+        </div>
+        <button id="languageSwitcher"></button>
+    </header>
+    
     <main>
-        <section>
-            <div class="aboutme">
-                <p>Hi, I'm Léo Party, I'm 19, and I'm a 3D creator. 
-                    At the moment, I've created 2 downloadable projects, and I'm currently developing new ones. 
-                    I created this website to share my animations, 3D models and games that I've been able to make from 2021 to 2023. 
-                    I'll update my website as soon as I create something new! ✨ Enjoy your visit ! ✨</p>
-                <img src="image/foggo.webp" alt="">
-            </div>
-            <div class="story">
-                <h2>My Story</h2>
-                <p>At the age of 13, I discovered Source Filmmaker [an animation software from Valve] and made a lot of animations based on FNAF. 
-                    Later, when I was about 15, I discovered a YouTube channel called Nico [a YouTube channel dedicated to UE4 game development]. 
-                    I loved his videos, so I decided to buy his UE4 course to try it out. At the beginning, I wasn't a big fan, but as time went by, I became more and more passionate about it. 
-                    It was at the age of 16 that I started to work with Blender. Of course, I started by making a 3D model of a doughnut, but as time went on I was able to make more and more beautiful models.</p>
-            </div>
-            <div class="software">
-                <h2>Softwares I Use</h2>
-                <div>
-                    <p>- Blender [for 3D models]</p>
-                    <p>- Unreal Engine 4 and 5 [For games]</p>
-                    <p>- FlStudio [To make music]</p>
-                    <p>- Audacity [To record voices]</p>
-                    <p>- PremierPro [To create video]</p>
-                </div>
-            </div>
-        </section>
+        <div class="txtArea">
+            <h1>Hi, I'm Léo Party</h1>
+            <h2>3D Artist & Game Developper</h2>
+            <p>He is always creating unique games by himself or with his team</p>
+        </div>
+        <img src="assets/img/foggo.webp" alt="">
     </main>
+
+    <footer>
+    </footer>
 </body>
 </html>

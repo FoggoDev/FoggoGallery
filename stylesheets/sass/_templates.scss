@@ -1,0 +1,26 @@
+@use 'var';
+
+h1 { 
+    font-family: 'Prompt', sans-serif; 
+    font-size: 3.5rem;
+    color: #eeeeee;
+}
+h2 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    letter-spacing: -.8px;
+}
+h2, a { 
+    font-family: 'Roboto', sans-serif; 
+    color: #cccccc;
+}
+:not(h1, h2, a) { 
+    font-family: 'Hind', sans-serif;
+    font-size: 1.25rem;
+    color: #aaaaaa;
+}
+
+main {
+    height: calc(100vh - 64px);
+    padding: 0 48px;
+}
