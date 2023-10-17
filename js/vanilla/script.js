@@ -9,32 +9,43 @@ window.onscroll = () => {
 }*/
 
 // Changing/Detecting Language
+const languageSwitcherBtn = document.getElementById('languageSwitcher')
+const langListDiv = document.querySelector('header .langList')
+
 let language = navigator.language.slice(0,2);
 const translatedLang =  ['fr','en']
 
 function loadLangTxt(){
     fetch(`/../assets/lang/${language}.json`)
         .then(function (response) { return response.json(); })
-        .then(function (jsonFile) { for (txtKey in jsonFile) { document.getElementById(`${txtKey}`).textContent = jsonFile[txtKey] } })
+        .then(function (jsonFile) { 
+            languageSwitcherBtn.textContent = language
+            for (txtKey in jsonFile) { document.getElementById(`${txtKey}`).textContent = jsonFile[txtKey] } 
+        })
 }
 
-if (!translatedLang.includes(language)) { language = 'en'}
-
-document.getElementById('languageSwitcher').textContent = language
+if (!translatedLang.includes(language)) { language = 'en' }
 
 loadLangTxt()
 
-document.getElementById('languageSwitcher').onclick = () => {
-    const langListDiv = document.createElement('div')
-    langListDiv.classList.add('langList')
+translatedLang.forEach(lang => {
+    const btnElement = document.createElement('button')
+    btnElement.append(document.createTextNode(lang))
+    langListDiv.appendChild(btnElement)
+});
 
-    translatedLang.forEach(lang => {
-        const btnElement = document.createElement('button')
-        btnElement.append(document.createTextNode(lang))
-        langListDiv.appendChild(btnElement)
-    });
-
-    if (document.querySelector('.langList') == null){ document.querySelector('header').append(langListDiv) } 
-    else { document.querySelector('.langList').remove() }
+languageSwitcherBtn.onclick = () => {
+    if (langListDiv.style.visibility == 'hidden') { langListDiv.style.visibility = 'visible' }
+    else { langListDiv.style.visibility = 'hidden' }
 }
+
+document.querySelectorAll('header .langList button').forEach(element => {
+    element.onclick = (clickedElement) => {
+        language = clickedElement.target.innerHTML
+        loadLangTxt()
+    }
+})
 //END
+
+document.cookie = "lang=en; max-age=2592000; path=/"
+console.log(document.cookie)
