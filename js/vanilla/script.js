@@ -24,7 +24,11 @@ function loadLangTxt(){
         })
 }
 
-if (!translatedLang.includes(language)) { language = 'en' }
+if (document.cookie.split('; ').find((variable) => variable.startsWith('lang='))) {
+    language = document.cookie.split('; ')
+                .find((variable) => variable.startsWith('lang='))
+                .slice(5)
+} else if (!translatedLang.includes(language)) { language = 'en' }
 
 loadLangTxt()
 
@@ -35,17 +39,16 @@ translatedLang.forEach(lang => {
 });
 
 languageSwitcherBtn.onclick = () => {
-    if (langListDiv.style.visibility == 'hidden') { langListDiv.style.visibility = 'visible' }
-    else { langListDiv.style.visibility = 'hidden' }
+    if (langListDiv.style.visibility == 'visible') { langListDiv.style.visibility = 'hidden' }
+    else { langListDiv.style.visibility = 'visible' }
 }
 
 document.querySelectorAll('header .langList button').forEach(element => {
     element.onclick = (clickedElement) => {
         language = clickedElement.target.innerHTML
         loadLangTxt()
+        document.cookie = `lang=${language}; max-age=2592000; SameSite=Strict; path=/`
+        langListDiv.style.visibility = 'hidden'
     }
 })
 //END
-
-document.cookie = "lang=en; max-age=2592000; path=/"
-console.log(document.cookie)

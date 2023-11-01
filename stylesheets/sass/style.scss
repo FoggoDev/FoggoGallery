@@ -15,7 +15,6 @@
 body { background-color: var.$background-color; }
 
 header {
-    /* Keep <header> on top of the screen */
     position: sticky;
     top: 0;
     z-index: 1;
@@ -64,6 +63,7 @@ header {
     }
 
     .langList {
+        visibility: hidden;
         position: absolute;
         display: block;
         right: 40px;
@@ -74,18 +74,23 @@ header {
     }
 }
 
-main:has(.txtArea + img) {
-    display: flex;
-    align-items: center;
-
-    .txtArea { 
-        width: 100%; 
-        p { width: 500px; }
-    }
-
-    img { 
-        height: 100%;
+main {
+    section:has(.txtArea + img) {
+        height: calc(100vh - 64px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        .txtArea { 
+            //width: 100%; 
+            p { width: 500px; }
+        }
+    
+        img { 
+            height: 100%;
+        }
     }
 }
+
 
 //.about {}

@@ -67,7 +67,6 @@ body {
 }
 
 header {
-  /* Keep <header> on top of the screen */
   position: sticky;
   top: 0;
   z-index: 1;
@@ -114,6 +113,7 @@ header > button::after {
   filter: invert(49%);
 }
 header .langList {
+  visibility: hidden;
   position: absolute;
   display: block;
   right: 40px;
@@ -123,17 +123,16 @@ header .langList {
   border-radius: 8px;
 }
 
-main:has(.txtArea + img) {
+main section:has(.txtArea + img) {
+  height: calc(100vh - 64px);
   display: flex;
   align-items: center;
+  justify-content: center;
 }
-main:has(.txtArea + img) .txtArea {
-  width: 100%;
-}
-main:has(.txtArea + img) .txtArea p {
+main section:has(.txtArea + img) .txtArea p {
   width: 500px;
 }
-main:has(.txtArea + img) img {
+main section:has(.txtArea + img) img {
   height: 100%;
 }
 
